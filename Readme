@@ -8,4 +8,4 @@ Python is a intepreter language
 
 
 intepreter works
-source code
+source code(basic.py) --> puthon byte codes(basic.pvc) intermediate instruction --> pvm (python virtual machine) --> output
