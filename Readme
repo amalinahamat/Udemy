@@ -1,0 +1,11 @@
+Python is a intepreter language
+- it read the program line by line
+- it translates only one line of program at a time into machine code
+- it produce intermediate code after translation
+- it takes less amount of time to analyze the source code
+- it is slower
+- it requires less memory space
+
+
+intepreter works
+source code
