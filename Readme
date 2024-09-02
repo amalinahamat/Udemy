@@ -9,3 +9,27 @@ Python is a intepreter language
 
 intepreter works
 source code(basic.py) --> puthon byte codes(basic.pvc) intermediate instruction --> pvm (python virtual machine) --> output
+
+Applications pf python
+- web development (django and flask)
+- data analysis and visualitzation (numpy, pandas, and matplotlib)
+- machine learning and ai (TensorFlow and scikit-learn)
+- scientific computing (pysics, astronomy and biology)
+
+advantages of python
+- readability
+- versality
+- large standard library
+- cross-platform compatibility 
+
+Python variable
+- a container that stored the data value
+- variable_name = variable_value
+- a = 10
+- name = "amal"
+- can only contains letters, numbers, and underscore.
+- cannot start with number
+- should not conflict with keywords like print, if, for
+- case sensitive, small and upper letter and differ
+ 
+
