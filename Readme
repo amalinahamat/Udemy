@@ -31,5 +31,16 @@ Python variable
 - cannot start with number
 - should not conflict with keywords like print, if, for
 - case sensitive, small and upper letter and differ
+- don't have to specify the data types for the variables
+
+Keywords in Python
+- if, else, for, while, def, return, import, class, True, False, None, etc
+- case-sensitive, cannor be used as variable names or function names
+- reserved word in python
+
+Datatypes and type casting in python
+-
+
+
  
 
