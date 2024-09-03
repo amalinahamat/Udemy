@@ -42,6 +42,8 @@ Datatypes and type casting in python
 - int, float, string, list, tuple, dictionary
 - typecasting is just convertion of one data type to another data type
 
+ID IN PYTHON - Address of value
+- same value will have same address memory location
 
  
 
