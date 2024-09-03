@@ -39,7 +39,8 @@ Keywords in Python
 - reserved word in python
 
 Datatypes and type casting in python
--
+- int, float, string, list, tuple, dictionary
+- typecasting is just convertion of one data type to another data type
 
 
  
