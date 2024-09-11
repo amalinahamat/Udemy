@@ -64,7 +64,71 @@ TYPES OF MACHINE LEARNING ALGORITHMS
             - assumptions can be violated - regression requires assumptions like normality, homoscedasticity and independence to be met, which
             may not always hold True
 
+            ii. logistic regression
+            - create the graph in the form of sigmoid function
+            - logistic regression predicts the output of a categorical depndent variable. therefore the outcome must be a categorical or discrete value.
+            it can be either yes or no, 0 or 1, true or false, etc. but instead of giving the exact value as 0 and 1, it gives the probabilistic values which lie between 0 and 1
+            - logistic regression is used for solving the classification problem
+            - s - shaped curve
+
+            types of logistic regression
+            - binomial : there can be only 2 possible types of the dependent variables such as 0 or 1, pass or fail, etc
+            - multinomial : there can be 3 or more possible unordered types of the dependent variable such as 'cat','dog', 'sheep'.
+            - ordinal : there can be 3 or more possible ordered types of dependent variables such as 'low', 'medium' or 'high'
+
+            sigmoid function 
+            - y = 1/1+e^-(b0 + b1x)
+            - bo is y-intercept
+            - b1 is slope
+
+
         b. classification algorithms are used to predict discrete categories such as classifying emails as spam or non-spam
+
+        c. SUPPORT VECTOR MACHINE (SVM)
+            - powerful supervised learning algorithm used for both classfification and regression tasks
+            - it finds the optimal hyperplane that separates different classes with the maximum margin, making it highly effective
+            at handling complex, high-dimensional data
+            - support vector is the closes datapoint to the margin
+            - however, primarily it is used for the classification problem in machine learning
+
+            - linear SVM : linear svm is used for linearly separable data, which means if a dataset can be classified into two classes
+            by using a single straight line, then such data is termed as linearly separable data, and classifier is used called linear svm classified
+
+            - non linear SVM : nonlinear svm is used for non-linealy separated data, which means if a datset cannot be classified by using a straight line,
+            then such data is termed as nonlinear data and classifier used is called non-liner classifier
+            - for nonlinear svm, we have to change the dimension of planes (1d converted to 2d and etc)
+            - if planes consists of X and Y, then we need add new plane Z in Non linear SVM
+
+            TYPES OF MARGIN
+            - hard margin - the maximum margin hyperplane or the hard margin hyperplane is a hyperplane that properly separates the data points of different categories
+            without any misclassifications. hard to predict the output
+            - soft margin - when the data is not perfectly separable or contains outliers, svm permits a soft margin technique.
+            each data point has a slack variable introduces by the soft margin svm formulation, which soften
+            the strict margin requirement and permits certain misclassification or violations. easy to predict the output
+
+            APPLICATIONS OF SVM
+            - image recognition : classifying images into different categories
+            - text classification : identifying sentiment, or spam in text data
+            - bioinformatics : predicting protein structures and gene functions
+            - finance : detecting fraud and making trading decisions
+            - medical diagnosis : classifying disease and predicting treatment outcome
+
+        d. k - nearest neighbour (knn) algorithm
+            - knn is a powerfull supervised learning algorithm used for classification and regression tasks in machine learning
+            - it works by identifying the K closest data points to a new input and making a prediction based on their labels or values
+
+            - example : suppose we have an image of a creature that looks similar to cat and dog, but we want to know either it is cat or dog.
+            so for this identification, we can use the knn algorithm, as it works on similarity measure. our knn model will find the similar
+            features of the new dataset to the cats and dogs and based on the most similar features, it will put it in either cat or dog category.
+
+            working step:
+            1. select the number k of the neighbours
+            2. calculate the euclidean distance of k number of neighbours
+            3. take the k neares neighbour as per the calculated euclidean distance
+            4. in the classification problem, the class labels of are determined by performing majority voting. the class with the most
+            occurences among the neighbour becomes the predicted class for the target point
+            in the regression proble, the class label is caluclated by taking average of the target values of k neares neigbours. the calculated 
+            average value becomes the predicted output for the target data point
 
 
     2. Unsupervised learning
