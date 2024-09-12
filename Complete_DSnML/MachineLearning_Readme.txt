@@ -130,6 +130,29 @@ TYPES OF MACHINE LEARNING ALGORITHMS
             in the regression proble, the class label is caluclated by taking average of the target values of k neares neigbours. the calculated 
             average value becomes the predicted output for the target data point
 
+            choosing the optimal number of neighbours (K)
+            - selecting the optimal value for the number of neighbours, K is crucial for the performance of the KNN algorithm
+            - a small K can lead to overfitting, while larger K can result in underfitting
+            - the ideal K strikes a balance between capturing local patterns and generalizing well to new data
+            - technique like cross-validation and grid search can help determeine the best K value for a given dataset and problem. the choice of k
+            also depend on factors like the size and complexity of the dataset, the level of noise, and the desired trade-off between accuracy and interpretability
+
+            distance metrics in KNN
+            1. euclidean metrics in KNN
+                - the cartesian distance between the two points which are in the plane/hyperplane
+
+            2. manhattan distance
+                - we interested in the total distance traveled by the object instead of the displacement
+
+            advantages and disadvantages of KNN
+            - simplicity : knn is easy to understand and implement, making it a popular choice for beginners in ml
+            - no assumptions : knn does not make any assumptions about the underlying data distribution, making it a robust algorithm for diverse datasets
+            - versatility : knn can be used for both classification and regression tasks, providing flexibility in its application
+            - sensitivity to irrelevant features : knn can be sensitive to irrelevant features, which can negatively impact its performance
+            - computational complexity : knn can be computationally expensive, especially for large datasets, as it requires calculating distances between all data points
+            - curse of dimensionality : knn perfromance can degrade as the number of feature increases, a phenomenon known as the "curse of dimensionality"
+
+
 
     2. Unsupervised learning
     - Unsupervised learning deals with unlabeled data, aiming to uncover hidden patterns or intrisic structures
@@ -140,6 +163,42 @@ TYPES OF MACHINE LEARNING ALGORITHMS
 
         b. dimensionality reduction
         - these algorithms reduce the number of input variables while retaining important information
+
+        a. K-means clustering
+        - a popular unsupervised machine learning algorithm used to group similar data points into distinct clusters
+        - k defines the number of pre-defined clusters that need to be created in the process, as if k = 2 , there will be two clusters, and for k = 3,
+        there will be 3 clusters and so on
+
+            k-means clustering is a fundamental unsupervised machine learning algorithm used to group similar data points into distinct clusters. the algorithm aims to 
+            partition the data into k clusters, where each observation belong to the cluster with the nearest mean, serving as representative prototype of that cluster.
+
+            key terminologies
+            - centroid : the mean or average point within a cluster, which represents the center or core of that cluster
+                    - the centroid is the mean or average point within a cluster, representing the center or core of that cluster
+                    - calculated by taking the average of all data points assigned to that particular cluster
+                    - important as they define the prototypes for each cluster and guide the assignement of data points to the closest cluster
+                    - often visualizes as geometric shape, such as circles or stars, within the cluster of data points to highlight their central position.
+            - cluster : a group of data points that are more similar to each other than to data points in other clusters.
+            - elbow method : a technique used to determine the optimal number of clusters(K) by analyzing the within-cluster sum of squares(WCSS)
+
+            STEP :
+            1. select the number K (using elbow method) to decide the number of clusters
+            2. select the random k points or centroids. (it can be other from the input dataset)
+            3. assign each data point to their closest centroid, which will form the predefined k clusters
+            4. calculate the variance and place a new centroid of each cluster
+            5. repeat the third steps, which means reassign each datapoint to the new closest centroid of each cluster
+            6. if any reassignment occurs, then go to step 4 else go to finish
+            7 the model is ready
+
+            elbow method step :
+            1. to find the optimal value of cluster, the elbow method follow the below steps
+            2. it executes the k-means clustering on a given dataset for different k values (range from 1-10)
+            3. for each value of k, calculates the wcss value
+            4. plots a curve between calculated WCSS (formula) values and the number of clusters k
+            5. the sharp point of bend or point of the plot looks like an arm, then that point is considered as the best value of K.
+            (find the first bend it will considered as the value of k)
+
+            by using the k value we can find the centroid of each clusters, by using the centroid we can group the clusters
 
 
 APPLICATIONS OF MACHINE LEARNING
