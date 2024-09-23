@@ -253,12 +253,48 @@ TYPES OF MACHINE LEARNING ALGORITHMS
                                                                                                           -> yes  -> accepted offer
 
             attribute selection measures
+            - the key to building an effective decision tree is choosing the right splitting criteria. this determines which feature
+            to use to split the data at each node. common slpitting criteria include:
+                1. information gain : selects the feature that maximizes the reduction in entropy or uncertainty
+                2. gini impurity : chooses the feature that minimizes the weight average of the squared probabilities of each class
+
+            entropy in decision tree classifier
+            - is the measure of uncertainty (cannot know the answer either yes or no)of a random variable, it characterizes the impurity of an arbitrary collection of examples
+            - the higher the entropy more the information content
+
+            entropy(s) =  -P(yes) log2 P(yes) - P(no) log2 P(no)
+            where
+            s = total number of samples
+            p(yes) = probability yes
+            p(no) = probability no
+
+            example :
+            for the set X = {a,a,a,b,b,b,b,b}
+            total instances = 8
+            instances b = 5
+            instances a = 3
+
+            entropy(h(x)) = [(3/8) log2 3/8 + 5/8 log2 5/8]
+                          = - [0.375(-1.415) + 0.625(-0.678)]
+                          = - (-0.53 - 0.424)
+                          = 0.954
+
+            information gain formula 
+
+            gini index formula
+
+            advantages of decision tree 
+            1. interpretability
+                users undertstand the reasoning behind the model's predictions, making them more transparent than othe algorithm
+            2. flexibility
+                can handle both numerical and categorical data , can be used both dor classification and regression tasks
+            3. robustness
+                can handle missing data, making them reliable choice for reald atasets that may contain noise or incomplete information
+            4. nonlinearity
+                can capture complex, nonlinear relationship in the data, allow to model complex pattern                                        
+
+        g. Random forest algorithm
             
-
-
-                                            
-
-
     2. Unsupervised learning
     - Unsupervised learning deals with unlabeled data, aiming to uncover hidden patterns or intrisic structures
     within the dataset
