@@ -156,7 +156,74 @@ TYPES OF MACHINE LEARNING ALGORITHMS
         - supervised learning algorithm which is based on bayes theorem and used for solving classification problems
         - it is a probabilistic classifier which means it predict on the basis of the probability of an object
         - some popular examples of naive bayes algorithm are spam filtration, sentimental analysis and classifying articles
+            a. mathematical formulation 
+                P(A|B) = P(B|A)P(A) / P(B)
+                P(A|B) -> Posterior probability
+                P(B|A) -> Likehood probability
+                P(A) -> Prior Probability
+                P(B) -> Marginal Probability
+            
+            b. working of naive bayes classifier
+                - working on Naive Bayes calssifier can be understood with the help of the below example:
+                    - suppose we have a dataset of weather conditions and corresponding target variable "Play". So, using this dataset we need to decide whether we should play
+                      or not on a particular day according to the weather conditions. so to solve this problem, we need to follow the below steps:
+                        1. convert the given dataset into frequency tables
+                        2. generate likehood table by finding the probability of given features
+                        3. now, use bayes theorem to calculate the posterior probability
+                        4. problem: if the weather is sunny, then the player should play or not?
+                        5. solution: to solve this , first consider the dataset given
 
+                          -  |  outlook    |    play
+                          0     Rainy           yes
+                          1     Sunny           yes
+                          2     Overcast        yes
+                          3     Overcast        yes   
+                          4     Sunny           No 
+                          5     Rainy           yes
+                          6     Sunny           yes
+                          7     Overcast        yes
+                          8     Rainy           No
+                          9     Sunny           No
+                          10    Sunny           yes
+                          11    Rainy           No
+                          12    Overcast        yes
+                          13    Overcast        yes
+
+                          Frequency table for the weather conditions
+
+                          weather       yes     no
+                          Overcast      5       0
+                          Rainy         2       2
+                          Sunny         3       2
+                          total         10      4
+
+                          Likehood table weather conditions
+
+                          weather       No            yes     
+                          Overcast      0             5           5/14 = 0.35
+                          Rainy         2             2           4/14 = 0.29
+                          Sunny         2             3           5/14 = 0.35
+                          all           4/14 = 0.29   10/14 = 0/71
+
+                          applying bayes theorem
+
+                          P(yes|sunny) = P(sunny|yes) * p(yes) / P(sunny)
+                          p(sunny|yes) = 3/10 = 0.3
+                          p(sunny) = 0.35
+                          p(yes) = 0.71
+                          so P(yes|sunny) = 0.3 * 0.71 / 0.35 => 0.60
+
+                          p(no|sunny) = p(sunny|no)*p(no) / p(sunny)
+                          p(sunny|no) = 2/4 = 0.5
+                          p(no) = 0.29
+                          p(sunny) = 0.35
+                          so p(no|sunny) = 0.5 * 0.29 / 0.35 => 0.41
+
+                          so as we can see from the above calculation that p(yes|sunny) > p(no|sunny)
+                          hence on a sunny day, player can play the game
+
+        f. Decision Trees
+            - a supervised learning technique that can be used fro both classification and
 
 
     2. Unsupervised learning
