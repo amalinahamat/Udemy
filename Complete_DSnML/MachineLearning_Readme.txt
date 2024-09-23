@@ -294,7 +294,48 @@ TYPES OF MACHINE LEARNING ALGORITHMS
                 can capture complex, nonlinear relationship in the data, allow to model complex pattern                                        
 
         g. Random forest algorithm
+        - a popular ml algorithm that belongs to the supervised machine learning
+        - can be used both for classification and regression
+        - based on concept of esemble learning which is a process of combining multiple classifiers to solve a complex problem and to 
+        improve the performance of the model
+        - random forest is a classifier that contains a number of decision trees on various subset of the given dataset and takes the average
+        to improve the predictive accuracy of the datasets and reduce overfitting
+
+            esemble learning technique
+            1. bagging
+                - creates multiple decision trees from random subsets of the training data and aggregates their prediction
+            2. boosting
+                - sequentially trains weak models with each new model focusing on the errors of the previous one
+            3. stacking
+                - combines the outputs of multiple models using a meta-model that learns how to best integrate them
+
+            for classifier - yes or no
+            for regression - find mean and average
+
+            working
+            1. select random K data points from the training sets
+            2. build the decision trees associated with the selected data points (subsets)
+            3. choose the number N for decision trees that you want to building
+            4. repeat step 1 and 2
+            5. for new data points, find the predictions of each decision tree, and assign the new datapoints to the category that
+            wins the majority votes
+
+            example :
+            suppose there is a dataset that contains multiple fruit images. so this dataset is given to the random forest classifier. the dataset
+            is divided into subsets and given to each decision tree. during the training phase, each decision tree produces a prediction result,
+            and when a new data point occurs, then based on the majority of results, the random forest classifier predict the final decision.
             
+            instance -> tree -1 -> class A  -|
+                     -> tree -2 -> class A  --> majority voting -> final class -> class A
+                     -> tree -3 -> class b  -|
+
+            advantages
+            1. improve accuracy
+            2. robustness to outliers
+            3. handles diverse data
+            4. automatic feature selection
+                
+
     2. Unsupervised learning
     - Unsupervised learning deals with unlabeled data, aiming to uncover hidden patterns or intrisic structures
     within the dataset
