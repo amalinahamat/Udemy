@@ -223,7 +223,40 @@ TYPES OF MACHINE LEARNING ALGORITHMS
                           hence on a sunny day, player can play the game
 
         f. Decision Trees
-            - a supervised learning technique that can be used fro both classification and
+            - a supervised learning technique that can be used both for classification and regression problems,
+            but mostly it is preferred for solving classification problems
+            - in decision tree, there are two nodes, which are the decision node / root node and leaf node
+            - it is a graphical representation for getting all the possible solutions to a problems/decisions based
+            on given conditions
+            - subnodes can be decision nodes or leaf node
+            - output value is whether yes or no
+
+            how does a tree decision working
+                1. begin the tree with the root node, says S which contains the complete datasets
+                2. find the best attribute in the dataset using attribute selection measure(ASM)
+                3. divide the S into subsets that contains possible values for the best attributes
+                4. generate the decision tree node, which contains the best attribute
+                4. recursively make new decision trees using hte subsets of the dataset created in 3. 
+                continue this process until a stage is reached where you cannot further classify the nodes and called the 
+                final nodes as leaf node
+
+            example :
+            suppose there is a candidate who has a job offer and wants to decide wheteher he should accept the offer or not.
+            so to solve this problem, the decision tree starts with the root node (salary attribute by ASM). The root node splits
+            further into the next decision (distance from the office) and one leaf node based on the corresponding labels. the next 
+            decision node furhter gets split into one decision node (cab facility) and one elaf node. finally the decision node
+            splits into two leaf nodes (accepted offers and declined offer).
+
+            salary is between $50000-$80000  -> no  -> declined offer
+                                             -> yes -> office near home -> no   -> declined offer
+                                                                        -> yes  -> provides cab facility  -> no   -> declined offer
+                                                                                                          -> yes  -> accepted offer
+
+            attribute selection measures
+            
+
+
+                                            
 
 
     2. Unsupervised learning
