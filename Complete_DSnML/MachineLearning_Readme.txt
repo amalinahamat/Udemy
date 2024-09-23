@@ -152,6 +152,11 @@ TYPES OF MACHINE LEARNING ALGORITHMS
             - computational complexity : knn can be computationally expensive, especially for large datasets, as it requires calculating distances between all data points
             - curse of dimensionality : knn perfromance can degrade as the number of feature increases, a phenomenon known as the "curse of dimensionality"
 
+        e. naive bayes algorithm
+        - supervised learning algorithm which is based on bayes theorem and used for solving classification problems
+        - it is a probabilistic classifier which means it predict on the basis of the probability of an object
+        - some popular examples of naive bayes algorithm are spam filtration, sentimental analysis and classifying articles
+
 
 
     2. Unsupervised learning
