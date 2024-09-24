@@ -331,13 +331,18 @@ TYPES OF MACHINE LEARNING ALGORITHMS
 
             advantages
             1. improve accuracy
+                combines multiple decision trees, reducing the risk of overfitting and imporoving the overall predictive performance compraed to
+                a single decision tree
             2. robustness to outliers
+                the esemble nature of random forest makes it less sensitive to outliers in the training data, increasing the model's reliability
             3. handles diverse data
+                can effectively handle a wide range of data types, including numerical, categorical, and mixes features, making it a versatile algorithm.
             4. automatic feature selection
+                can automatically determine the most important featured, simplfying the feature engineering process for the user
                 
 
     2. Unsupervised learning
-    - Unsupervised learning deals with unlabeled data, aiming to uncover hidden patterns or intrisic structures
+    - Unsupervised learning deals with unlabeled data, aiming to uncover hidden patterns or intrinsic structures
     within the dataset
 
         a. clustering
